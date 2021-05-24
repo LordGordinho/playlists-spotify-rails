@@ -1,0 +1,5 @@
+<h1> Bem vindo <%= @spotify_user.display_name %>
+
+<%= link_to 'Cria PlayLIst', new_playlist_path %>
+
+<%= link_to "Logout", destroy_user_session_path, method: :delete %>

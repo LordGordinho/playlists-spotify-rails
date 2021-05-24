@@ -1,0 +1,12 @@
+<%= form_with(model: music, local: true) do |form| %>
+    <div class='field'>
+        <%= form.label :playlist_id %>
+        <%= form.collection_select :playlist_id, Playlist.all, :id, :name, include_blank: false %>
+    </div>
+
+    <%= form.text_field :id_spotify, value: params[:id_music] , class: "d-none" %>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
