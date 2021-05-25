@@ -1,3 +1,7 @@
-<% @playlist.each do |playlist| %>
-    <p> <%= playlist.name %> </p>
-<% end %>
+<div class = "container">
+    <% @playlist.each do |playlist| %>
+        <h3> <%= playlist.name %> </h3>
+        <%= link_to "Iniciar a Fetsa com essa playlist", playlist_path(playlist), class: "btn btn-outline-primary" %>
+        <%= link_to "Excluir Playlist", playlist_path(playlist), method: :delete , class: "btn btn-outline-danger" %>
+    <% end %>
+<div class = "container">

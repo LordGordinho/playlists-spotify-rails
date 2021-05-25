@@ -5,8 +5,6 @@ class AddMusicJob < ApplicationJob
 
     track = RSpotify::Track.find(music_id)
 
-    RemoveMusicJob.set(wait: ( (track.duration_ms / 1000) + 10 ).seconds).perform_later(hash , music_id, playlist_id)
-
     spotify_user = RSpotify::User.new(hash)
     playlists_spotify = spotify_user.playlists
 
@@ -16,9 +14,7 @@ class AddMusicJob < ApplicationJob
 
     playlist_spotify = playlist_spotify.reject(&:blank?)
     playlist_spotify = playlist_spotify[0]
-
     
-    byebug 
     begin 
         playlist_spotify.add_tracks!([track])
     rescue RestClient::BadRequest 
