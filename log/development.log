@@ -19463,3 +19463,1422 @@ Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2021-05-24 2
 Started GET "/sidekiq/stylesheets/application-dark.css" for 127.0.0.1 at 2021-05-24 22:17:19 -0300
 Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2021-05-24 22:17:19 -0300
 Started GET "/sidekiq/images/status.png" for 127.0.0.1 at 2021-05-24 22:17:19 -0300
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe] Performing RemoveMusicJob (Job ID: ed24a083-ffc3-452b-89a1-cfa8f2f79ebe) from Sidekiq(default) enqueued at 2021-05-25T01:16:25Z with arguments: 1, 2
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/jobs/remove_music_job.rb:6:in `perform'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mPlaylist Load (0.9ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/jobs/remove_music_job.rb:7:in `perform'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mMusic Load (1.8ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)[0m  [["playlist_id", 2], [nil, "4CVg8p96jlKyYeLjupzVZ4"], [nil, "6LDAUF7L1PhZh0utprIpe2"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1PQRwFvNM7xV65bIkHmDtx"], [nil, "0BYrbDZHhawvqbj3DXDQql"], [nil, "2Gjt4rUHBUH0rMKpBg0hF4"], [nil, "0gmDtSc2Ay17diWj6nJjlG"], [nil, "4Ijct6HkKsC9HQVgcnMe7C"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "6fDznfFRjouzaKssGLFp2x"], [nil, "4ZM2bK24dV7paMOEO8FQiA"], [nil, "4y7DKv0aPbnBOr4N4Zmarg"]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/jobs/remove_music_job.rb:16:in `map'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe] Enqueued RemoveMusicJob (Job ID: 52472fbe-31cb-42c5-9945-65ed94f6506b) to Sidekiq(default) at 2021-05-25 01:23:11 UTC with arguments: 1, 2
+[ActiveJob] [RemoveMusicJob] [ed24a083-ffc3-452b-89a1-cfa8f2f79ebe] Performed RemoveMusicJob (Job ID: ed24a083-ffc3-452b-89a1-cfa8f2f79ebe) from Sidekiq(default) in 1577.31ms
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b] Performing RemoveMusicJob (Job ID: 52472fbe-31cb-42c5-9945-65ed94f6506b) from Sidekiq(default) enqueued at 2021-05-25T01:19:51Z with arguments: 1, 2
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/jobs/remove_music_job.rb:6:in `perform'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mPlaylist Load (0.8ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/jobs/remove_music_job.rb:7:in `perform'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mMusic Load (1.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)[0m  [["playlist_id", 2], [nil, "4CVg8p96jlKyYeLjupzVZ4"], [nil, "6LDAUF7L1PhZh0utprIpe2"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1PQRwFvNM7xV65bIkHmDtx"], [nil, "0BYrbDZHhawvqbj3DXDQql"], [nil, "2Gjt4rUHBUH0rMKpBg0hF4"], [nil, "0gmDtSc2Ay17diWj6nJjlG"], [nil, "4Ijct6HkKsC9HQVgcnMe7C"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "6fDznfFRjouzaKssGLFp2x"], [nil, "4ZM2bK24dV7paMOEO8FQiA"], [nil, "4y7DKv0aPbnBOr4N4Zmarg"]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/jobs/remove_music_job.rb:16:in `map'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b] Enqueued RemoveMusicJob (Job ID: e276ee36-fd82-4fae-baf6-d48d626ae1af) to Sidekiq(default) at 2021-05-25 01:26:37 UTC with arguments: 1, 2
+[ActiveJob] [RemoveMusicJob] [52472fbe-31cb-42c5-9945-65ed94f6506b] Performed RemoveMusicJob (Job ID: 52472fbe-31cb-42c5-9945-65ed94f6506b) from Sidekiq(default) in 1724.69ms
+  [1m[36mMusic Load (38.0ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY "musics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2021-05-25 20:59:33 -0300
+  [1m[35m (11.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 57ms (ActiveRecord: 0.0ms | Allocations: 1677)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-05-25 20:59:33 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 7.7ms | Allocations: 611)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 31.6ms | Allocations: 2892)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 55.7ms | Allocations: 8954)
+Completed 200 OK in 280ms (Views: 253.5ms | ActiveRecord: 9.9ms | Allocations: 16589)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-05-25 20:59:39 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jorge@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (87.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jorge@email.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 544ms (ActiveRecord: 89.8ms | Allocations: 5067)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-25 20:59:40 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/auth/spotify
+Completed 302 Found in 23ms (ActiveRecord: 1.9ms | Allocations: 1515)
+
+
+Started GET "/auth/spotify" for 127.0.0.1 at 2021-05-25 20:59:40 -0300
+Started GET "/auth/spotify/callback?code=AQAu_GxdeTR05uCehpCUXo2MlbUcUwoNWbUpmuK-SgwIUOSCX0ilLIyHqVvXs6JMVPu2uepK72xBjiMNDCpLlWzT51fZsgtxDPta28n-akySRD7zwdn0e6r-qjGVpD9yqSiEJNrXUltrZ8_iMBGZnuQeHoQbUDYIFA6jv9dI3jsIaI_dT4oUO0Rigmv53FsLPr8K_PKVqkPq05W74kykNvPoxUHxPRDSNc8gM8hGWgg6H7DdmVqDOBV4wBI600-ZJuclTPG7yuJSeIgLwHj91oTsWFb5rhHE9BweZU1CKRJ5SdTCTD-IVzDvh8UFH0wuD-0lFUrWDQRmYEBum_zlTt6TDID-KKKowq_xXlT5avKSXyu8n9XetOY4kxwfUOYmxk4T4lhVd26GcgasApANQGh9NHS-tRw-ok1h727Pg16C88W2P9EQ8g&state=8d13f9ee8417b313979d01d8ddc85542ba95c8740b8ffae5" for 127.0.0.1 at 2021-05-25 20:59:40 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"code"=>"AQAu_GxdeTR05uCehpCUXo2MlbUcUwoNWbUpmuK-SgwIUOSCX0ilLIyHqVvXs6JMVPu2uepK72xBjiMNDCpLlWzT51fZsgtxDPta28n-akySRD7zwdn0e6r-qjGVpD9yqSiEJNrXUltrZ8_iMBGZnuQeHoQbUDYIFA6jv9dI3jsIaI_dT4oUO0Rigmv53FsLPr8K_PKVqkPq05W74kykNvPoxUHxPRDSNc8gM8hGWgg6H7DdmVqDOBV4wBI600-ZJuclTPG7yuJSeIgLwHj91oTsWFb5rhHE9BweZU1CKRJ5SdTCTD-IVzDvh8UFH0wuD-0lFUrWDQRmYEBum_zlTt6TDID-KKKowq_xXlT5avKSXyu8n9XetOY4kxwfUOYmxk4T4lhVd26GcgasApANQGh9NHS-tRw-ok1h727Pg16C88W2P9EQ8g", "state"=>"8d13f9ee8417b313979d01d8ddc85542ba95c8740b8ffae5"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/home_controller.rb:8:in `index'
+  [1m[36mUser Update (42.1ms)[0m  [1m[33mUPDATE "users" SET "user_hash" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["user_hash", "---\nbirthdate: \ncountry: \ndisplay_name: Jorge Felipe\nemail: felipespfc310800@gmail.com\nfollowers: !ruby/hash:OmniAuth::AuthHash\n  href: \n  total: 27\nimages: !ruby/array:Hashie::Array\n- !ruby/hash:OmniAuth::AuthHash\n  height: \n  url: https://scontent-ort2-2.xx.fbcdn.net/v/t1.6435-1/c6.0.320.320a/p320x320/71086984_2434063610044358_947977351847739392_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=0c64ff&_nc_ohc=vXS-gSP_NWUAX-w7Spx&_nc_ht=scontent-ort2-2.xx&tp=27&oh=24635ae3bf398e182fffe2aadf62ef24&oe=60D3F5D7\n  width: \nproduct: \nexternal_urls: !ruby/hash:OmniAuth::AuthHash\n  spotify: https://open.spotify.com/user/12165846304\nhref: https://api.spotify.com/v1/users/12165846304\nid: '12165846304'\ntype: user\nuri: spotify:user:12165846304\ncredentials: !ruby/hash:OmniAuth::AuthHash\n  token: BQDLhFvKFa5xZjDPWRJzckcfQy77hKEQaiAGxrji-ZjZrQ94prtBA3MBqnf0-Bu--7CwIjvQOyy2l4uEgABrx9SNn5iN7hO-Q8Bh-ZJcoXZ_LdrzDAjxpxNb-0UPltOyBjlieYZ90NDmAy0f8K8ogqqLPas4MA6DB5Saw-1wMt2qTa-vnuMllD0HEnzjT_3wzaGq25U63R9FNIWaS8beFgCpQlrwgj25D_DUX-vQgBHeDTyQNoXDAHEM\n  refresh_token: AQAesSjYS4hhvyu1I8ms2sGQ_x-38D2D3_URfXA-I3tThP9VxNYOj2lwaotox9Fpi5I-HMl2laW0ckaOS2avGCgRgf2CjvdGCjs_qGgph_4rAr2TYI91tbKaWWZus083M1M\n  expires_at: 1621990781\n  expires: true\n"], ["updated_at", "2021-05-25 23:59:41.813459"], ["id", 1]]
+  ↳ app/controllers/home_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (20.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/home_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 3395)
+Completed 200 OK in 143ms (Views: 20.0ms | ActiveRecord: 67.1ms | Allocations: 10423)
+
+
+Started GET "/musics/" for 127.0.0.1 at 2021-05-25 20:59:50 -0300
+Processing by MusicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering musics/index.html.erb within layouts/application
+  [1m[36mMusic Load (3.7ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/musics/index.html.erb:19
+  [1m[36mPlaylist Load (39.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  Rendered musics/index.html.erb within layouts/application (Duration: 207.5ms | Allocations: 17932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 220.0ms | Allocations: 20971)
+Completed 200 OK in 229ms (Views: 157.1ms | ActiveRecord: 66.4ms | Allocations: 22583)
+
+
+  [1m[36mPlaylist Load (0.9ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPlaylist Load (1.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMusic Load (0.8ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1[0m  [["playlist_id", 2]]
+  [1m[36mPlaylist Load (1.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMusic Load (1.0ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1[0m  [["playlist_id", 2]]
+  [1m[36mPlaylist Load (1.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMusic Load (0.8ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["playlist_id", 2], ["LIMIT", 11]]
+  [1m[36mPlaylist Load (1.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMusic Load (1.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."name" = $2 /* loading for inspect */ LIMIT $3[0m  [["playlist_id", 2], ["name", "asda"], ["LIMIT", 11]]
+  [1m[36mPlaylist Load (1.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMusic Load (1.8ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."name" = $2 AND ( OR "musics"."sounded" = true ) /* loading for inspect */ LIMIT $3[0m  [["playlist_id", 2], ["name", "asda"], ["LIMIT", 11]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPlaylist Load (1.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mPlaylist Load (0.9ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" ORDER BY "playlists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPlaylist Load (1.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" ORDER BY "playlists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMusic Load (1.9ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) /* loading for inspect */ LIMIT $22[0m  [["playlist_id", 2], [nil, "4CVg8p96jlKyYeLjupzVZ4"], [nil, "6LDAUF7L1PhZh0utprIpe2"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1PQRwFvNM7xV65bIkHmDtx"], [nil, "0BYrbDZHhawvqbj3DXDQql"], [nil, "2Gjt4rUHBUH0rMKpBg0hF4"], [nil, "0gmDtSc2Ay17diWj6nJjlG"], [nil, "4Ijct6HkKsC9HQVgcnMe7C"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "6fDznfFRjouzaKssGLFp2x"], [nil, "4ZM2bK24dV7paMOEO8FQiA"], [nil, "4y7DKv0aPbnBOr4N4Zmarg"], ["LIMIT", 11]]
+  [1m[36mMusic Load (2.4ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND ( "musics"."id_spotify" = '4CVg8p96jlKyYeLjupzVZ4','6LDAUF7L1PhZh0utprIpe2','1XqnaJPGDFEytLEvYdJsS3','1XqnaJPGDFEytLEvYdJsS3','1PQRwFvNM7xV65bIkHmDtx','0BYrbDZHhawvqbj3DXDQql','2Gjt4rUHBUH0rMKpBg0hF4','0gmDtSc2Ay17diWj6nJjlG','4Ijct6HkKsC9HQVgcnMe7C','5wyifj9jya5OUkuTKLFIhn','2LOIoeI16A8jjKubPKoCSa','2c9JSOnIet8d2SIL0BZfhN','2c9JSOnIet8d2SIL0BZfhN','2LOIoeI16A8jjKubPKoCSa','2LOIoeI16A8jjKubPKoCSa','2LOIoeI16A8jjKubPKoCSa','5wyifj9jya5OUkuTKLFIhn','6fDznfFRjouzaKssGLFp2x','4ZM2bK24dV7paMOEO8FQiA','4y7DKv0aPbnBOr4N4Zmarg' AND sounded = true) /* loading for inspect */ LIMIT $2[0m  [["playlist_id", 2], ["LIMIT", 11]]
+  [1m[36mMusic Load (1.9ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND ( "musics"."id_spotify" = '4CVg8p96jlKyYeLjupzVZ4','6LDAUF7L1PhZh0utprIpe2','1XqnaJPGDFEytLEvYdJsS3','1XqnaJPGDFEytLEvYdJsS3','1PQRwFvNM7xV65bIkHmDtx','0BYrbDZHhawvqbj3DXDQql','2Gjt4rUHBUH0rMKpBg0hF4','0gmDtSc2Ay17diWj6nJjlG','4Ijct6HkKsC9HQVgcnMe7C','5wyifj9jya5OUkuTKLFIhn','2LOIoeI16A8jjKubPKoCSa','2c9JSOnIet8d2SIL0BZfhN','2c9JSOnIet8d2SIL0BZfhN','2LOIoeI16A8jjKubPKoCSa','2LOIoeI16A8jjKubPKoCSa','2LOIoeI16A8jjKubPKoCSa','5wyifj9jya5OUkuTKLFIhn','6fDznfFRjouzaKssGLFp2x','4ZM2bK24dV7paMOEO8FQiA','4y7DKv0aPbnBOr4N4Zmarg') /* loading for inspect */ LIMIT $2[0m  [["playlist_id", 2], ["LIMIT", 11]]
+  [1m[36mMusic Load (1.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND ( "musics"."id_spotify" = '["4CVg8p96jlKyYeLjupzVZ4", "6LDAUF7L1PhZh0utprIpe2", "1XqnaJPGDFEytLEvYdJsS3", "1XqnaJPGDFEytLEvYdJsS3", "1PQRwFvNM7xV65bIkHmDtx", "0BYrbDZHhawvqbj3DXDQql", "2Gjt4rUHBUH0rMKpBg0hF4", "0gmDtSc2Ay17diWj6nJjlG", "4Ijct6HkKsC9HQVgcnMe7C", "5wyifj9jya5OUkuTKLFIhn", "2LOIoeI16A8jjKubPKoCSa", "2c9JSOnIet8d2SIL0BZfhN", "2c9JSOnIet8d2SIL0BZfhN", "2LOIoeI16A8jjKubPKoCSa", "2LOIoeI16A8jjKubPKoCSa", "2LOIoeI16A8jjKubPKoCSa", "5wyifj9jya5OUkuTKLFIhn", "6fDznfFRjouzaKssGLFp2x", "4ZM2bK24dV7paMOEO8FQiA", "4y7DKv0aPbnBOr4N4Zmarg"]') /* loading for inspect */ LIMIT $2[0m  [["playlist_id", 2], ["LIMIT", 11]]
+  [1m[36mMusic Load (2.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND ( "musics"."id_spotify" = '4CVg8p96jlKyYeLjupzVZ4','6LDAUF7L1PhZh0utprIpe2','1XqnaJPGDFEytLEvYdJsS3','1XqnaJPGDFEytLEvYdJsS3','1PQRwFvNM7xV65bIkHmDtx','0BYrbDZHhawvqbj3DXDQql','2Gjt4rUHBUH0rMKpBg0hF4','0gmDtSc2Ay17diWj6nJjlG','4Ijct6HkKsC9HQVgcnMe7C','5wyifj9jya5OUkuTKLFIhn','2LOIoeI16A8jjKubPKoCSa','2c9JSOnIet8d2SIL0BZfhN','2c9JSOnIet8d2SIL0BZfhN','2LOIoeI16A8jjKubPKoCSa','2LOIoeI16A8jjKubPKoCSa','2LOIoeI16A8jjKubPKoCSa','5wyifj9jya5OUkuTKLFIhn','6fDznfFRjouzaKssGLFp2x','4ZM2bK24dV7paMOEO8FQiA','4y7DKv0aPbnBOr4N4Zmarg' ) /* loading for inspect */ LIMIT $2[0m  [["playlist_id", 2], ["LIMIT", 11]]
+  [1m[36mMusic Load (1.5ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) /* loading for inspect */ LIMIT $22[0m  [["playlist_id", 2], [nil, "4CVg8p96jlKyYeLjupzVZ4"], [nil, "6LDAUF7L1PhZh0utprIpe2"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1PQRwFvNM7xV65bIkHmDtx"], [nil, "0BYrbDZHhawvqbj3DXDQql"], [nil, "2Gjt4rUHBUH0rMKpBg0hF4"], [nil, "0gmDtSc2Ay17diWj6nJjlG"], [nil, "4Ijct6HkKsC9HQVgcnMe7C"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "6fDznfFRjouzaKssGLFp2x"], [nil, "4ZM2bK24dV7paMOEO8FQiA"], [nil, "4y7DKv0aPbnBOr4N4Zmarg"], ["LIMIT", 11]]
+  [1m[36mMusic Load (2.0ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND ( "musics"."id_spotify" IN '4CVg8p96jlKyYeLjupzVZ4','6LDAUF7L1PhZh0utprIpe2','1XqnaJPGDFEytLEvYdJsS3','1XqnaJPGDFEytLEvYdJsS3','1PQRwFvNM7xV65bIkHmDtx','0BYrbDZHhawvqbj3DXDQql','2Gjt4rUHBUH0rMKpBg0hF4','0gmDtSc2Ay17diWj6nJjlG','4Ijct6HkKsC9HQVgcnMe7C','5wyifj9jya5OUkuTKLFIhn','2LOIoeI16A8jjKubPKoCSa','2c9JSOnIet8d2SIL0BZfhN','2c9JSOnIet8d2SIL0BZfhN','2LOIoeI16A8jjKubPKoCSa','2LOIoeI16A8jjKubPKoCSa','2LOIoeI16A8jjKubPKoCSa','5wyifj9jya5OUkuTKLFIhn','6fDznfFRjouzaKssGLFp2x','4ZM2bK24dV7paMOEO8FQiA','4y7DKv0aPbnBOr4N4Zmarg' ) /* loading for inspect */ LIMIT $2[0m  [["playlist_id", 2], ["LIMIT", 11]]
+  [1m[36mMusic Load (1.9ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND ( "musics"."id_spotify" IN '(["4CVg8p96jlKyYeLjupzVZ4", "6LDAUF7L1PhZh0utprIpe2", "1XqnaJPGDFEytLEvYdJsS3", "1XqnaJPGDFEytLEvYdJsS3", "1PQRwFvNM7xV65bIkHmDtx", "0BYrbDZHhawvqbj3DXDQql", "2Gjt4rUHBUH0rMKpBg0hF4", "0gmDtSc2Ay17diWj6nJjlG", "4Ijct6HkKsC9HQVgcnMe7C", "5wyifj9jya5OUkuTKLFIhn", "2LOIoeI16A8jjKubPKoCSa", "2c9JSOnIet8d2SIL0BZfhN", "2c9JSOnIet8d2SIL0BZfhN", "2LOIoeI16A8jjKubPKoCSa", "2LOIoeI16A8jjKubPKoCSa", "2LOIoeI16A8jjKubPKoCSa", "5wyifj9jya5OUkuTKLFIhn", "6fDznfFRjouzaKssGLFp2x", "4ZM2bK24dV7paMOEO8FQiA", "4y7DKv0aPbnBOr4N4Zmarg"])' ) /* loading for inspect */ LIMIT $2[0m  [["playlist_id", 2], ["LIMIT", 11]]
+  [1m[36mMusic Load (1.7ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND ( "musics"."id_spotify" IN '["4CVg8p96jlKyYeLjupzVZ4", "6LDAUF7L1PhZh0utprIpe2", "1XqnaJPGDFEytLEvYdJsS3", "1XqnaJPGDFEytLEvYdJsS3", "1PQRwFvNM7xV65bIkHmDtx", "0BYrbDZHhawvqbj3DXDQql", "2Gjt4rUHBUH0rMKpBg0hF4", "0gmDtSc2Ay17diWj6nJjlG", "4Ijct6HkKsC9HQVgcnMe7C", "5wyifj9jya5OUkuTKLFIhn", "2LOIoeI16A8jjKubPKoCSa", "2c9JSOnIet8d2SIL0BZfhN", "2c9JSOnIet8d2SIL0BZfhN", "2LOIoeI16A8jjKubPKoCSa", "2LOIoeI16A8jjKubPKoCSa", "2LOIoeI16A8jjKubPKoCSa", "5wyifj9jya5OUkuTKLFIhn", "6fDznfFRjouzaKssGLFp2x", "4ZM2bK24dV7paMOEO8FQiA", "4y7DKv0aPbnBOr4N4Zmarg"]' ) /* loading for inspect */ LIMIT $2[0m  [["playlist_id", 2], ["LIMIT", 11]]
+  [1m[36mMusic Load (2.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND ( "musics"."id_spotify" IN '4CVg8p96jlKyYeLjupzVZ4','6LDAUF7L1PhZh0utprIpe2','1XqnaJPGDFEytLEvYdJsS3','1XqnaJPGDFEytLEvYdJsS3','1PQRwFvNM7xV65bIkHmDtx','0BYrbDZHhawvqbj3DXDQql','2Gjt4rUHBUH0rMKpBg0hF4','0gmDtSc2Ay17diWj6nJjlG','4Ijct6HkKsC9HQVgcnMe7C','5wyifj9jya5OUkuTKLFIhn','2LOIoeI16A8jjKubPKoCSa','2c9JSOnIet8d2SIL0BZfhN','2c9JSOnIet8d2SIL0BZfhN','2LOIoeI16A8jjKubPKoCSa','2LOIoeI16A8jjKubPKoCSa','2LOIoeI16A8jjKubPKoCSa','5wyifj9jya5OUkuTKLFIhn','6fDznfFRjouzaKssGLFp2x','4ZM2bK24dV7paMOEO8FQiA','4y7DKv0aPbnBOr4N4Zmarg' ) /* loading for inspect */ LIMIT $2[0m  [["playlist_id", 2], ["LIMIT", 11]]
+  [1m[36mMusic Load (1.8ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) /* loading for inspect */ LIMIT $22[0m  [["playlist_id", 2], [nil, "4CVg8p96jlKyYeLjupzVZ4"], [nil, "6LDAUF7L1PhZh0utprIpe2"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1PQRwFvNM7xV65bIkHmDtx"], [nil, "0BYrbDZHhawvqbj3DXDQql"], [nil, "2Gjt4rUHBUH0rMKpBg0hF4"], [nil, "0gmDtSc2Ay17diWj6nJjlG"], [nil, "4Ijct6HkKsC9HQVgcnMe7C"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "6fDznfFRjouzaKssGLFp2x"], [nil, "4ZM2bK24dV7paMOEO8FQiA"], [nil, "4y7DKv0aPbnBOr4N4Zmarg"], ["LIMIT", 11]]
+  [1m[36mMusic Load (1.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) /* loading for inspect */ LIMIT $22[0m  [["playlist_id", 2], [nil, "4CVg8p96jlKyYeLjupzVZ4"], [nil, "6LDAUF7L1PhZh0utprIpe2"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1PQRwFvNM7xV65bIkHmDtx"], [nil, "0BYrbDZHhawvqbj3DXDQql"], [nil, "2Gjt4rUHBUH0rMKpBg0hF4"], [nil, "0gmDtSc2Ay17diWj6nJjlG"], [nil, "4Ijct6HkKsC9HQVgcnMe7C"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "6fDznfFRjouzaKssGLFp2x"], [nil, "4ZM2bK24dV7paMOEO8FQiA"], [nil, "4y7DKv0aPbnBOr4N4Zmarg"], ["LIMIT", 11]]
+  [1m[36mMusic Load (1.6ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) AND "musics"."sounded" = $22 /* loading for inspect */ LIMIT $23[0m  [["playlist_id", 2], [nil, "4CVg8p96jlKyYeLjupzVZ4"], [nil, "6LDAUF7L1PhZh0utprIpe2"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1PQRwFvNM7xV65bIkHmDtx"], [nil, "0BYrbDZHhawvqbj3DXDQql"], [nil, "2Gjt4rUHBUH0rMKpBg0hF4"], [nil, "0gmDtSc2Ay17diWj6nJjlG"], [nil, "4Ijct6HkKsC9HQVgcnMe7C"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "6fDznfFRjouzaKssGLFp2x"], [nil, "4ZM2bK24dV7paMOEO8FQiA"], [nil, "4y7DKv0aPbnBOr4N4Zmarg"], ["sounded", true], ["LIMIT", 11]]
+  [1m[36mMusic Load (1.7ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) AND "musics"."sounded" = $22 /* loading for inspect */ LIMIT $23[0m  [["playlist_id", 2], [nil, "4CVg8p96jlKyYeLjupzVZ4"], [nil, "6LDAUF7L1PhZh0utprIpe2"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1PQRwFvNM7xV65bIkHmDtx"], [nil, "0BYrbDZHhawvqbj3DXDQql"], [nil, "2Gjt4rUHBUH0rMKpBg0hF4"], [nil, "0gmDtSc2Ay17diWj6nJjlG"], [nil, "4Ijct6HkKsC9HQVgcnMe7C"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "6fDznfFRjouzaKssGLFp2x"], [nil, "4ZM2bK24dV7paMOEO8FQiA"], [nil, "4y7DKv0aPbnBOr4N4Zmarg"], ["sounded", false], ["LIMIT", 11]]
+  [1m[36mMusic Load (1.6ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) AND "musics"."sounded" = $22 /* loading for inspect */ LIMIT $23[0m  [["playlist_id", 2], [nil, "4CVg8p96jlKyYeLjupzVZ4"], [nil, "6LDAUF7L1PhZh0utprIpe2"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1PQRwFvNM7xV65bIkHmDtx"], [nil, "0BYrbDZHhawvqbj3DXDQql"], [nil, "2Gjt4rUHBUH0rMKpBg0hF4"], [nil, "0gmDtSc2Ay17diWj6nJjlG"], [nil, "4Ijct6HkKsC9HQVgcnMe7C"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "6fDznfFRjouzaKssGLFp2x"], [nil, "4ZM2bK24dV7paMOEO8FQiA"], [nil, "4y7DKv0aPbnBOr4N4Zmarg"], ["sounded", false], ["LIMIT", 11]]
+  [1m[36mMusic Load (1.5ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) AND "musics"."sounded" = $22 /* loading for inspect */ LIMIT $23[0m  [["playlist_id", 2], [nil, "4CVg8p96jlKyYeLjupzVZ4"], [nil, "6LDAUF7L1PhZh0utprIpe2"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1PQRwFvNM7xV65bIkHmDtx"], [nil, "0BYrbDZHhawvqbj3DXDQql"], [nil, "2Gjt4rUHBUH0rMKpBg0hF4"], [nil, "0gmDtSc2Ay17diWj6nJjlG"], [nil, "4Ijct6HkKsC9HQVgcnMe7C"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "6fDznfFRjouzaKssGLFp2x"], [nil, "4ZM2bK24dV7paMOEO8FQiA"], [nil, "4y7DKv0aPbnBOr4N4Zmarg"], ["sounded", true], ["LIMIT", 11]]
+Started GET "/musics/" for 127.0.0.1 at 2021-05-25 21:26:47 -0300
+Processing by MusicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering musics/index.html.erb within layouts/application
+  [1m[36mMusic Load (2.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/musics/index.html.erb:19
+  [1m[36mPlaylist Load (3.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  Rendered musics/index.html.erb within layouts/application (Duration: 104.1ms | Allocations: 18047)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 116.7ms | Allocations: 21080)
+Completed 200 OK in 124ms (Views: 120.4ms | ActiveRecord: 30.6ms | Allocations: 21921)
+
+
+Started GET "/musics/show?q=amor+de+c%C3%A3o&commit=Search" for 127.0.0.1 at 2021-05-25 21:27:05 -0300
+Processing by MusicsController#show as HTML
+  Parameters: {"q"=>"amor de cão", "commit"=>"Search", "id"=>"show"}
+  Rendering layout layouts/application.html.erb
+  Rendering musics/show.html.erb within layouts/application
+  Rendered musics/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 920)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 3987)
+Completed 200 OK in 1229ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 20526)
+
+
+Started GET "/musics/new?id_music=4y7DKv0aPbnBOr4N4Zmarg" for 127.0.0.1 at 2021-05-25 21:27:11 -0300
+Processing by MusicsController#new as HTML
+  Parameters: {"id_music"=>"4y7DKv0aPbnBOr4N4Zmarg"}
+  Rendering layout layouts/application.html.erb
+  Rendering musics/new.html.erb within layouts/application
+  [1m[36mPlaylist Load (2.7ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/musics/_form.html.erb:4
+  Rendered musics/_form.html.erb (Duration: 19.1ms | Allocations: 1965)
+  Rendered musics/new.html.erb within layouts/application (Duration: 21.4ms | Allocations: 2254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 5384)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 2.7ms | Allocations: 5914)
+
+
+Started POST "/musics" for 127.0.0.1 at 2021-05-25 21:27:13 -0300
+Processing by MusicsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "music"=>{"playlist_id"=>"2", "id_spotify"=>"4y7DKv0aPbnBOr4N4Zmarg"}, "commit"=>"Create Music"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:15:in `create'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f] Performing AddMusicJob (Job ID: c7ba7237-6730-46db-a947-c67897ce811f) from Sidekiq(default) enqueued at  with arguments: {"birthdate"=>nil, "country"=>nil, "display_name"=>"Jorge Felipe", "email"=>"felipespfc310800@gmail.com", "followers"=>#<OmniAuth::AuthHash href=nil total=27>, "images"=>[#<OmniAuth::AuthHash height=nil url="https://scontent-ort2-2.xx.fbcdn.net/v/t1.6435-1/c6.0.320.320a/p320x320/71086984_2434063610044358_947977351847739392_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=0c64ff&_nc_ohc=vXS-gSP_NWUAX-w7Spx&_nc_ht=scontent-ort2-2.xx&tp=27&oh=24635ae3bf398e182fffe2aadf62ef24&oe=60D3F5D7" width=nil>], "product"=>nil, "external_urls"=>#<OmniAuth::AuthHash spotify="https://open.spotify.com/user/12165846304">, "href"=>"https://api.spotify.com/v1/users/12165846304", "id"=>"12165846304", "type"=>"user", "uri"=>"spotify:user:12165846304", "credentials"=>#<OmniAuth::AuthHash expires=true expires_at=1621990781 refresh_token="AQAesSjYS4hhvyu1I8ms2sGQ_x-38D2D3_URfXA-I3tThP9VxNYOj2lwaotox9Fpi5I-HMl2laW0ckaOS2avGCgRgf2CjvdGCjs_qGgph_4rAr2TYI91tbKaWWZus083M1M" token="BQDLhFvKFa5xZjDPWRJzckcfQy77hKEQaiAGxrji-ZjZrQ94prtBA3MBqnf0-Bu--7CwIjvQOyy2l4uEgABrx9SNn5iN7hO-Q8Bh-ZJcoXZ_LdrzDAjxpxNb-0UPltOyBjlieYZ90NDmAy0f8K8ogqqLPas4MA6DB5Saw-1wMt2qTa-vnuMllD0HEnzjT_3wzaGq25U63R9FNIWaS8beFgCpQlrwgj25D_DUX-vQgBHeDTyQNoXDAHEM">}, "4y7DKv0aPbnBOr4N4Zmarg", "2"
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mPlaylist Load (2.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (1.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c7ba7237-6730-46db-a947-c67897ce811f] Performed AddMusicJob (Job ID: c7ba7237-6730-46db-a947-c67897ce811f) from Sidekiq(default) in 1302.71ms
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/musics_controller.rb:29:in `create'
+  [1m[36mPlaylist Load (5.6ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:29:in `create'
+  [1m[36mMusic Create (56.8ms)[0m  [1m[32mINSERT INTO "musics" ("name", "href", "id_spotify", "time", "playlist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Amor de Cão"], ["href", "https://api.spotify.com/v1/tracks/4y7DKv0aPbnBOr4N4Zmarg"], ["id_spotify", "4y7DKv0aPbnBOr4N4Zmarg"], ["time", 172002], ["playlist_id", 2], ["created_at", "2021-05-26 00:27:14.953395"], ["updated_at", "2021-05-26 00:27:14.953395"]]
+  ↳ app/controllers/musics_controller.rb:29:in `create'
+  [1m[36mTRANSACTION (24.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/musics_controller.rb:29:in `create'
+Redirected to http://127.0.0.1:3000/musics
+Completed 302 Found in 1792ms (ActiveRecord: 97.5ms | Allocations: 32849)
+
+
+Started GET "/musics" for 127.0.0.1 at 2021-05-25 21:27:15 -0300
+Processing by MusicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering musics/index.html.erb within layouts/application
+  [1m[36mMusic Load (6.0ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/musics/index.html.erb:19
+  [1m[36mPlaylist Load (3.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  Rendered musics/index.html.erb within layouts/application (Duration: 52.2ms | Allocations: 5476)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.7ms | Allocations: 8628)
+Completed 200 OK in 75ms (Views: 63.6ms | ActiveRecord: 9.4ms | Allocations: 9032)
+
+
+Started DELETE "/musics/1" for 127.0.0.1 at 2021-05-25 21:27:52 -0300
+Processing by MusicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mMusic Load (2.4ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:34:in `destroy'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:36:in `destroy'
+  [1m[36mPlaylist Load (2.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:36:in `destroy'
+  [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/musics_controller.rb:42:in `destroy'
+  [1m[36mMusic Destroy (3.4ms)[0m  [1m[31mDELETE FROM "musics" WHERE "musics"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/musics_controller.rb:42:in `destroy'
+  [1m[36mTRANSACTION (27.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/musics_controller.rb:42:in `destroy'
+Redirected to http://127.0.0.1:3000/musics
+Completed 302 Found in 918ms (ActiveRecord: 40.4ms | Allocations: 21947)
+
+
+Started GET "/musics" for 127.0.0.1 at 2021-05-25 21:27:53 -0300
+Processing by MusicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering musics/index.html.erb within layouts/application
+  [1m[36mMusic Load (2.5ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/musics/index.html.erb:19
+  [1m[36mPlaylist Load (2.7ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  Rendered musics/index.html.erb within layouts/application (Duration: 29.4ms | Allocations: 4867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.8ms | Allocations: 8001)
+Completed 200 OK in 45ms (Views: 38.4ms | ActiveRecord: 5.4ms | Allocations: 8403)
+
+
+Started DELETE "/musics/7" for 127.0.0.1 at 2021-05-25 21:27:58 -0300
+Processing by MusicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"7"}
+  [1m[36mMusic Load (2.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:34:in `destroy'
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:36:in `destroy'
+  [1m[36mPlaylist Load (1.6ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:36:in `destroy'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/musics_controller.rb:42:in `destroy'
+  [1m[36mMusic Destroy (3.6ms)[0m  [1m[31mDELETE FROM "musics" WHERE "musics"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/musics_controller.rb:42:in `destroy'
+  [1m[36mTRANSACTION (25.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/musics_controller.rb:42:in `destroy'
+Redirected to http://127.0.0.1:3000/musics
+Completed 302 Found in 1324ms (ActiveRecord: 38.5ms | Allocations: 22126)
+
+
+Started GET "/musics" for 127.0.0.1 at 2021-05-25 21:28:00 -0300
+Processing by MusicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering musics/index.html.erb within layouts/application
+  [1m[36mMusic Load (7.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/musics/index.html.erb:19
+  [1m[36mPlaylist Load (2.8ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  Rendered musics/index.html.erb within layouts/application (Duration: 31.5ms | Allocations: 4260)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 7390)
+Completed 200 OK in 48ms (Views: 36.8ms | ActiveRecord: 10.1ms | Allocations: 7794)
+
+
+  [1m[36mPlaylist Load (1.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMusic Load (0.6ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" = $2 LIMIT $3[0m  [["playlist_id", 2], ["id_spotify", "2LOIoeI16A8jjKubPKoCSa"], ["LIMIT", 1]]
+  [1m[36mPlaylist Load (0.9ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMusic Load (1.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" = $2 LIMIT $3[0m  [["playlist_id", 2], ["id_spotify", "2LOIoeI16A8jjKubPKoCSa"], ["LIMIT", 1]]
+  [1m[36mPlaylist Load (1.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" ORDER BY "playlists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMusic Load (1.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" = $2 LIMIT $3[0m  [["playlist_id", 2], ["id_spotify", "2LOIoeI16A8jjKubPKoCSa"], ["LIMIT", 1]]
+  [1m[36mPlaylist Load (1.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" ORDER BY "playlists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMusic Load (0.9ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" = $2 /* loading for inspect */ LIMIT $3[0m  [["playlist_id", 2], ["id_spotify", "2LOIoeI16A8jjKubPKoCSa"], ["LIMIT", 11]]
+  [1m[36mPlaylist Load (1.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" ORDER BY "playlists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMusic Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" = $2 LIMIT $3[0m  [["playlist_id", 2], ["id_spotify", "2LOIoeI16A8jjKubPKoCSa"], ["LIMIT", 1]]
+  [1m[36mPlaylist Load (0.7ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMusic Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" = $2 LIMIT $3[0m  [["playlist_id", 2], ["id_spotify", "2LOIoeI16A8jjKubPKoCSa"], ["LIMIT", 1]]
+  [1m[36mPlaylist Load (1.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" ORDER BY "playlists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMusic Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" = $2 LIMIT $3[0m  [["playlist_id", 2], ["id_spotify", "1PQRwFvNM7xV65bIkHmDtx"], ["LIMIT", 1]]
+  [1m[36mPlaylist Load (1.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" ORDER BY "playlists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (31.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "musics" WHERE "musics"."playlist_id" = $1[0m  [["playlist_id", 2]]
+Started GET "/musics/show?q=pegando+leve&commit=Search" for 127.0.0.1 at 2021-05-25 21:42:17 -0300
+Processing by MusicsController#show as HTML
+  Parameters: {"q"=>"pegando leve", "commit"=>"Search", "id"=>"show"}
+  Rendering layout layouts/application.html.erb
+  Rendering musics/show.html.erb within layouts/application
+  Rendered musics/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 3331)
+Completed 200 OK in 459ms (Views: 19.8ms | Allocations: 8764)
+
+
+Started GET "/musics/new?id_music=5wyifj9jya5OUkuTKLFIhn" for 127.0.0.1 at 2021-05-25 21:42:19 -0300
+Processing by MusicsController#new as HTML
+  Parameters: {"id_music"=>"5wyifj9jya5OUkuTKLFIhn"}
+  Rendering layout layouts/application.html.erb
+  Rendering musics/new.html.erb within layouts/application
+  [1m[36mPlaylist Load (3.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/musics/_form.html.erb:4
+  Rendered musics/_form.html.erb (Duration: 30.0ms | Allocations: 6800)
+  Rendered musics/new.html.erb within layouts/application (Duration: 32.3ms | Allocations: 6889)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.7ms | Allocations: 10018)
+Completed 200 OK in 93ms (Views: 42.4ms | ActiveRecord: 22.1ms | Allocations: 17387)
+
+
+Started POST "/musics" for 127.0.0.1 at 2021-05-25 21:42:20 -0300
+Processing by MusicsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "music"=>{"playlist_id"=>"2", "id_spotify"=>"5wyifj9jya5OUkuTKLFIhn"}, "commit"=>"Create Music"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:15:in `create'
+  [1m[36mPlaylist Load (3.9ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:19:in `create'
+Completed 500 Internal Server Error in 360ms (ActiveRecord: 9.0ms | Allocations: 9986)
+
+
+  
+NoMethodError (undefined method `musics' for nil:NilClass):
+  
+app/controllers/musics_controller.rb:19:in `create'
+Started PUT "/__web_console/repl_sessions/a540970c8e349fa49e9c54f677e413e2" for 127.0.0.1 at 2021-05-25 21:42:48 -0300
+Started PUT "/__web_console/repl_sessions/a540970c8e349fa49e9c54f677e413e2" for 127.0.0.1 at 2021-05-25 21:42:49 -0300
+  [1m[36mPlaylist Load (1.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:19:in `create'
+Started PUT "/__web_console/repl_sessions/a540970c8e349fa49e9c54f677e413e2" for 127.0.0.1 at 2021-05-25 21:42:56 -0300
+Started PUT "/__web_console/repl_sessions/a540970c8e349fa49e9c54f677e413e2" for 127.0.0.1 at 2021-05-25 21:43:29 -0300
+Started PUT "/__web_console/repl_sessions/a540970c8e349fa49e9c54f677e413e2" for 127.0.0.1 at 2021-05-25 21:43:42 -0300
+Started POST "/musics" for 127.0.0.1 at 2021-05-25 21:43:59 -0300
+Processing by MusicsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "music"=>{"playlist_id"=>"2", "id_spotify"=>"5wyifj9jya5OUkuTKLFIhn"}, "commit"=>"Create Music"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:15:in `create'
+  [1m[36mPlaylist Load (2.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:19:in `create'
+  [1m[36mMusic Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" = $2 LIMIT $3[0m  [["playlist_id", 2], ["id_spotify", "5wyifj9jya5OUkuTKLFIhn"], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:19:in `create'
+Redirected to http://127.0.0.1:3000/musics
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/musics_controller.rb:33:in `create'
+  [1m[36mPlaylist Load (2.7ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:33:in `create'
+  [1m[36mMusic Create (2.3ms)[0m  [1m[32mINSERT INTO "musics" ("name", "href", "id_spotify", "time", "playlist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pegando Leve"], ["href", "https://api.spotify.com/v1/tracks/5wyifj9jya5OUkuTKLFIhn"], ["id_spotify", "5wyifj9jya5OUkuTKLFIhn"], ["time", 281426], ["playlist_id", 2], ["created_at", "2021-05-26 00:44:00.235100"], ["updated_at", "2021-05-26 00:44:00.235100"]]
+  ↳ app/controllers/musics_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (19.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/musics_controller.rb:33:in `create'
+Redirected to 
+Completed 500 Internal Server Error in 571ms (ActiveRecord: 69.0ms | Allocations: 27250)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/musics_controller.rb:33:in `create'
+Started GET "/musics/new?id_music=5wyifj9jya5OUkuTKLFIhn" for 127.0.0.1 at 2021-05-25 21:44:06 -0300
+Processing by MusicsController#new as HTML
+  Parameters: {"id_music"=>"5wyifj9jya5OUkuTKLFIhn"}
+  Rendering layout layouts/application.html.erb
+  Rendering musics/new.html.erb within layouts/application
+  [1m[36mPlaylist Load (3.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/musics/_form.html.erb:4
+  Rendered musics/_form.html.erb (Duration: 14.0ms | Allocations: 1706)
+  Rendered musics/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 1795)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 5055)
+Completed 200 OK in 31ms (Views: 25.3ms | ActiveRecord: 3.0ms | Allocations: 5636)
+
+
+Started GET "/musics" for 127.0.0.1 at 2021-05-25 21:44:29 -0300
+Processing by MusicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering musics/index.html.erb within layouts/application
+  [1m[36mMusic Load (2.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/musics/index.html.erb:19
+  [1m[36mPlaylist Load (2.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  Rendered musics/index.html.erb within layouts/application (Duration: 46.6ms | Allocations: 4891)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.1ms | Allocations: 8021)
+Completed 200 OK in 63ms (Views: 56.6ms | ActiveRecord: 4.8ms | Allocations: 8423)
+
+
+Started DELETE "/musics/8" for 127.0.0.1 at 2021-05-25 21:44:31 -0300
+Processing by MusicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"8"}
+  [1m[36mMusic Load (3.1ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:38:in `destroy'
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:40:in `destroy'
+  [1m[36mPlaylist Load (2.4ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:40:in `destroy'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/services/get_playlist_service.rb:11:in `block in call'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/musics_controller.rb:46:in `destroy'
+  [1m[36mMusic Destroy (2.8ms)[0m  [1m[31mDELETE FROM "musics" WHERE "musics"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/musics_controller.rb:46:in `destroy'
+  [1m[36mTRANSACTION (17.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/musics_controller.rb:46:in `destroy'
+Redirected to http://127.0.0.1:3000/musics
+Completed 302 Found in 1416ms (ActiveRecord: 31.3ms | Allocations: 25286)
+
+
+Started GET "/musics" for 127.0.0.1 at 2021-05-25 21:44:33 -0300
+Processing by MusicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering musics/index.html.erb within layouts/application
+  [1m[36mMusic Load (2.8ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/musics/index.html.erb:19
+  [1m[36mPlaylist Load (2.8ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  Rendered musics/index.html.erb within layouts/application (Duration: 46.0ms | Allocations: 4260)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.3ms | Allocations: 7390)
+Completed 200 OK in 63ms (Views: 55.1ms | ActiveRecord: 5.9ms | Allocations: 7792)
+
+
+  [1m[36mPlaylist Load (1.2ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" ORDER BY "playlists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "musics" WHERE "musics"."playlist_id" = $1[0m  [["playlist_id", 2]]
+Started GET "/musics/show?q=pegando+leve&commit=Search" for 127.0.0.1 at 2021-05-25 21:45:00 -0300
+Processing by MusicsController#show as HTML
+  Parameters: {"q"=>"pegando leve", "commit"=>"Search", "id"=>"show"}
+  Rendering layout layouts/application.html.erb
+  Rendering musics/show.html.erb within layouts/application
+  Rendered musics/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3331)
+Completed 200 OK in 470ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 8719)
+
+
+Started GET "/musics/new?id_music=5wyifj9jya5OUkuTKLFIhn" for 127.0.0.1 at 2021-05-25 21:45:02 -0300
+Processing by MusicsController#new as HTML
+  Parameters: {"id_music"=>"5wyifj9jya5OUkuTKLFIhn"}
+  Rendering layout layouts/application.html.erb
+  Rendering musics/new.html.erb within layouts/application
+  [1m[36mPlaylist Load (2.6ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/musics/_form.html.erb:4
+  Rendered musics/_form.html.erb (Duration: 51.0ms | Allocations: 10275)
+  Rendered musics/new.html.erb within layouts/application (Duration: 51.5ms | Allocations: 10364)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.6ms | Allocations: 13391)
+Completed 200 OK in 99ms (Views: 51.9ms | ActiveRecord: 23.6ms | Allocations: 18405)
+
+
+Started POST "/musics" for 127.0.0.1 at 2021-05-25 21:45:04 -0300
+Processing by MusicsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "music"=>{"playlist_id"=>"2", "id_spotify"=>"5wyifj9jya5OUkuTKLFIhn"}, "commit"=>"Create Music"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:15:in `create'
+  [1m[36mPlaylist Load (2.7ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:19:in `create'
+  [1m[36mMusic Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" = $2 LIMIT $3[0m  [["playlist_id", 2], ["id_spotify", "5wyifj9jya5OUkuTKLFIhn"], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:19:in `create'
+Redirected to http://127.0.0.1:3000/musics
+Completed 302 Found in 375ms (ActiveRecord: 20.4ms | Allocations: 10597)
+
+
+Started GET "/musics" for 127.0.0.1 at 2021-05-25 21:45:04 -0300
+Processing by MusicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering musics/index.html.erb within layouts/application
+  [1m[36mMusic Load (2.2ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/musics/index.html.erb:19
+  [1m[36mPlaylist Load (2.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.3ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  Rendered musics/index.html.erb within layouts/application (Duration: 36.7ms | Allocations: 5056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.6ms | Allocations: 8100)
+Completed 200 OK in 52ms (Views: 45.4ms | ActiveRecord: 4.8ms | Allocations: 8503)
+
+
+  [1m[36mPlaylist Load (0.9ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" ORDER BY "playlists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "musics" WHERE "musics"."playlist_id" = $1[0m  [["playlist_id", 2]]
+Started GET "/musics/show?q=Amarelo+azul&commit=Search" for 127.0.0.1 at 2021-05-25 21:45:11 -0300
+Processing by MusicsController#show as HTML
+  Parameters: {"q"=>"Amarelo azul", "commit"=>"Search", "id"=>"show"}
+  Rendering layout layouts/application.html.erb
+  Rendering musics/show.html.erb within layouts/application
+  Rendered musics/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 782)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 3846)
+Completed 200 OK in 474ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 14657)
+
+
+Started GET "/musics/new?id_music=2LOIoeI16A8jjKubPKoCSa" for 127.0.0.1 at 2021-05-25 21:45:17 -0300
+Processing by MusicsController#new as HTML
+  Parameters: {"id_music"=>"2LOIoeI16A8jjKubPKoCSa"}
+  Rendering layout layouts/application.html.erb
+  Rendering musics/new.html.erb within layouts/application
+  [1m[36mPlaylist Load (2.6ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/musics/_form.html.erb:4
+  Rendered musics/_form.html.erb (Duration: 18.8ms | Allocations: 1561)
+  Rendered musics/new.html.erb within layouts/application (Duration: 19.4ms | Allocations: 1650)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 4779)
+Completed 200 OK in 39ms (Views: 34.7ms | ActiveRecord: 2.6ms | Allocations: 5189)
+
+
+Started POST "/musics" for 127.0.0.1 at 2021-05-25 21:45:18 -0300
+Processing by MusicsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "music"=>{"playlist_id"=>"2", "id_spotify"=>"2LOIoeI16A8jjKubPKoCSa"}, "commit"=>"Create Music"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:15:in `create'
+  [1m[36mPlaylist Load (2.5ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:19:in `create'
+  [1m[36mMusic Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" = $2 LIMIT $3[0m  [["playlist_id", 2], ["id_spotify", "2LOIoeI16A8jjKubPKoCSa"], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:19:in `create'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5] Performing AddMusicJob (Job ID: c67f7de2-a883-4140-9ecf-ecf3c341ccf5) from Sidekiq(default) enqueued at  with arguments: {"birthdate"=>nil, "country"=>nil, "display_name"=>"Jorge Felipe", "email"=>"felipespfc310800@gmail.com", "followers"=>#<OmniAuth::AuthHash href=nil total=27>, "images"=>[#<OmniAuth::AuthHash height=nil url="https://scontent-ort2-2.xx.fbcdn.net/v/t1.6435-1/c6.0.320.320a/p320x320/71086984_2434063610044358_947977351847739392_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=0c64ff&_nc_ohc=vXS-gSP_NWUAX-w7Spx&_nc_ht=scontent-ort2-2.xx&tp=27&oh=24635ae3bf398e182fffe2aadf62ef24&oe=60D3F5D7" width=nil>], "product"=>nil, "external_urls"=>#<OmniAuth::AuthHash spotify="https://open.spotify.com/user/12165846304">, "href"=>"https://api.spotify.com/v1/users/12165846304", "id"=>"12165846304", "type"=>"user", "uri"=>"spotify:user:12165846304", "credentials"=>#<OmniAuth::AuthHash expires=true expires_at=1621990781 refresh_token="AQAesSjYS4hhvyu1I8ms2sGQ_x-38D2D3_URfXA-I3tThP9VxNYOj2lwaotox9Fpi5I-HMl2laW0ckaOS2avGCgRgf2CjvdGCjs_qGgph_4rAr2TYI91tbKaWWZus083M1M" token="BQDLhFvKFa5xZjDPWRJzckcfQy77hKEQaiAGxrji-ZjZrQ94prtBA3MBqnf0-Bu--7CwIjvQOyy2l4uEgABrx9SNn5iN7hO-Q8Bh-ZJcoXZ_LdrzDAjxpxNb-0UPltOyBjlieYZ90NDmAy0f8K8ogqqLPas4MA6DB5Saw-1wMt2qTa-vnuMllD0HEnzjT_3wzaGq25U63R9FNIWaS8beFgCpQlrwgj25D_DUX-vQgBHeDTyQNoXDAHEM">}, "2LOIoeI16A8jjKubPKoCSa", "2"
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5]   ↳ app/jobs/add_music_job.rb:12:in `block in perform'
+[ActiveJob] [AddMusicJob] [c67f7de2-a883-4140-9ecf-ecf3c341ccf5] Performed AddMusicJob (Job ID: c67f7de2-a883-4140-9ecf-ecf3c341ccf5) from Sidekiq(default) in 1188.25ms
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/musics_controller.rb:33:in `create'
+  [1m[36mPlaylist Load (3.6ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/musics_controller.rb:33:in `create'
+  [1m[36mMusic Create (2.8ms)[0m  [1m[32mINSERT INTO "musics" ("name", "href", "id_spotify", "time", "playlist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Amarelo, azul e branco"], ["href", "https://api.spotify.com/v1/tracks/2LOIoeI16A8jjKubPKoCSa"], ["id_spotify", "2LOIoeI16A8jjKubPKoCSa"], ["time", 201452], ["playlist_id", 2], ["created_at", "2021-05-26 00:45:20.412108"], ["updated_at", "2021-05-26 00:45:20.412108"]]
+  ↳ app/controllers/musics_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/musics_controller.rb:33:in `create'
+Redirected to http://127.0.0.1:3000/musics
+Completed 302 Found in 1604ms (ActiveRecord: 37.7ms | Allocations: 30018)
+
+
+Started GET "/musics" for 127.0.0.1 at 2021-05-25 21:45:20 -0300
+Processing by MusicsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering musics/index.html.erb within layouts/application
+  [1m[36mMusic Load (1.8ms)[0m  [1m[34mSELECT "musics".* FROM "musics"[0m
+  ↳ app/views/musics/index.html.erb:19
+  [1m[36mPlaylist Load (1.9ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/musics/index.html.erb:23
+  Rendered musics/index.html.erb within layouts/application (Duration: 60.6ms | Allocations: 4867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 79.6ms | Allocations: 8013)
+Completed 200 OK in 82ms (Views: 77.0ms | ActiveRecord: 3.9ms | Allocations: 8416)
+
+
+  [1m[36mPlaylist Load (0.9ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" ORDER BY "playlists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "musics" WHERE "musics"."playlist_id" = $1[0m  [["playlist_id", 2]]
+[ActiveJob] [RemoveMusicJob] [62e1aecc-bab8-4cb7-af33-69b7ee1ad2fc] Performing RemoveMusicJob (Job ID: 62e1aecc-bab8-4cb7-af33-69b7ee1ad2fc) from Sidekiq(default) enqueued at 2021-05-25T00:26:16Z with arguments: 1, 3
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af] Performing RemoveMusicJob (Job ID: e276ee36-fd82-4fae-baf6-d48d626ae1af) from Sidekiq(default) enqueued at 2021-05-25T01:23:17Z with arguments: 1, 2
+[ActiveJob] [RemoveMusicJob] [62e1aecc-bab8-4cb7-af33-69b7ee1ad2fc]   [1m[36mUser Load (32.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mUser Load (14.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [62e1aecc-bab8-4cb7-af33-69b7ee1ad2fc]   ↳ app/jobs/remove_music_job.rb:6:in `perform'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/jobs/remove_music_job.rb:6:in `perform'
+[ActiveJob] [RemoveMusicJob] [62e1aecc-bab8-4cb7-af33-69b7ee1ad2fc]   [1m[36mPlaylist Load (51.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [62e1aecc-bab8-4cb7-af33-69b7ee1ad2fc]   ↳ app/jobs/remove_music_job.rb:7:in `perform'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mPlaylist Load (88.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/jobs/remove_music_job.rb:7:in `perform'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mMusic Load (104.9ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1[0m  [["playlist_id", 2]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/jobs/remove_music_job.rb:7:in `perform'
+[ActiveJob] [RemoveMusicJob] [62e1aecc-bab8-4cb7-af33-69b7ee1ad2fc] Error performing RemoveMusicJob (Job ID: 62e1aecc-bab8-4cb7-af33-69b7ee1ad2fc) from Sidekiq(default) in 3517.79ms: NoMethodError (undefined method `musics' for nil:NilClass):
+/home/r00t/Projetos/playlists-spotify-rails/app/jobs/remove_music_job.rb:15:in `perform'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/execution.rb:48:in `block in perform_now'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/i18n-1.8.10/lib/i18n.rb:314:in `with_locale'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `instance_exec'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `instance_exec'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/instrumentation.rb:21:in `block in instrument'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/notifications.rb:203:in `block in instrument'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/notifications.rb:203:in `instrument'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/instrumentation.rb:31:in `instrument'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/instrumentation.rb:14:in `block (2 levels) in <module:Instrumentation>'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `instance_exec'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/logging.rb:22:in `block in tag_logger'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/tagged_logging.rb:37:in `tagged'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/tagged_logging.rb:99:in `tagged'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/logging.rb:22:in `tag_logger'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/logging.rb:15:in `block (2 levels) in <module:Logging>'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `instance_exec'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:137:in `run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/execution.rb:47:in `perform_now'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/execution.rb:25:in `block in execute'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/railtie.rb:47:in `block (4 levels) in <class:Railtie>'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/reloader.rb:72:in `block in wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/execution_wrapper.rb:84:in `wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/reloader.rb:71:in `wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/railtie.rb:46:in `block (3 levels) in <class:Railtie>'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `instance_exec'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:137:in `run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/execution.rb:23:in `execute'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:196:in `execute_job'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:163:in `block in process'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/job_retry.rb:112:in `local'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/rails.rb:14:in `block in call'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/reloader.rb:72:in `block in wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/reloader.rb:71:in `wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/rails.rb:13:in `call'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:257:in `stats'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/job_logger.rb:13:in `call'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/job_retry.rb:79:in `global'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/logger.rb:11:in `with'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/job_logger.rb:33:in `prepare'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:123:in `dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:162:in `process'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:78:in `process_one'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:68:in `run'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/util.rb:43:in `watchdog'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/util.rb:52:in `block in safe_thread'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af] Error performing RemoveMusicJob (Job ID: e276ee36-fd82-4fae-baf6-d48d626ae1af) from Sidekiq(default) in 3528.13ms: RestClient::Forbidden (403 Forbidden):
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rest-client-2.0.2/lib/restclient/abstract_response.rb:223:in `exception_with_response'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rest-client-2.0.2/lib/restclient/abstract_response.rb:103:in `return!'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rest-client-2.0.2/lib/restclient/request.rb:809:in `process_result'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rest-client-2.0.2/lib/restclient/request.rb:725:in `block in transmit'
+/home/r00t/.asdf/installs/ruby/2.7.3/lib/ruby/2.7.0/net/http.rb:933:in `start'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rest-client-2.0.2/lib/restclient/request.rb:715:in `transmit'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rest-client-2.0.2/lib/restclient/request.rb:145:in `execute'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rest-client-2.0.2/lib/restclient/request.rb:52:in `execute'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rest-client-2.0.2/lib/restclient.rb:67:in `get'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rspotify-2.10.2/lib/rspotify/connection.rb:86:in `retry_connection'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rspotify-2.10.2/lib/rspotify/connection.rb:77:in `rescue in send_request'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rspotify-2.10.2/lib/rspotify/connection.rb:63:in `send_request'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rspotify-2.10.2/lib/rspotify/user.rb:75:in `oauth_send'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rspotify-2.10.2/lib/rspotify/user.rb:87:in `block (2 levels) in <class:User>'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rspotify-2.10.2/lib/rspotify/connection.rb:49:in `resolve_auth_request'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/rspotify-2.10.2/lib/rspotify/user.rb:173:in `recently_played'
+/home/r00t/Projetos/playlists-spotify-rails/app/jobs/remove_music_job.rb:13:in `perform'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/execution.rb:48:in `block in perform_now'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/i18n-1.8.10/lib/i18n.rb:314:in `with_locale'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `instance_exec'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `instance_exec'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/instrumentation.rb:21:in `block in instrument'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/notifications.rb:203:in `block in instrument'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/notifications.rb:203:in `instrument'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/instrumentation.rb:31:in `instrument'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/instrumentation.rb:14:in `block (2 levels) in <module:Instrumentation>'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `instance_exec'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/logging.rb:22:in `block in tag_logger'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/tagged_logging.rb:37:in `tagged'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/tagged_logging.rb:99:in `tagged'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/logging.rb:22:in `tag_logger'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/logging.rb:15:in `block (2 levels) in <module:Logging>'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `instance_exec'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:137:in `run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/execution.rb:47:in `perform_now'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/execution.rb:25:in `block in execute'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/railtie.rb:47:in `block (4 levels) in <class:Railtie>'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/reloader.rb:72:in `block in wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/execution_wrapper.rb:84:in `wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/reloader.rb:71:in `wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/railtie.rb:46:in `block (3 levels) in <class:Railtie>'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `instance_exec'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/callbacks.rb:137:in `run_callbacks'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/execution.rb:23:in `execute'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activejob-6.1.3.2/lib/active_job/queue_adapters/sidekiq_adapter.rb:42:in `perform'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:196:in `execute_job'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:164:in `block (2 levels) in process'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/middleware/chain.rb:133:in `invoke'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:163:in `block in process'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:136:in `block (6 levels) in dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/job_retry.rb:112:in `local'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:135:in `block (5 levels) in dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/rails.rb:14:in `block in call'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/reloader.rb:72:in `block in wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/execution_wrapper.rb:88:in `wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/activesupport-6.1.3.2/lib/active_support/reloader.rb:71:in `wrap'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/rails.rb:13:in `call'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:131:in `block (4 levels) in dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:257:in `stats'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:126:in `block (3 levels) in dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/job_logger.rb:13:in `call'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:125:in `block (2 levels) in dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/job_retry.rb:79:in `global'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:124:in `block in dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/logger.rb:11:in `with'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/job_logger.rb:33:in `prepare'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:123:in `dispatch'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:162:in `process'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:78:in `process_one'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/processor.rb:68:in `run'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/util.rb:43:in `watchdog'
+/home/r00t/.rvm/gems/ruby-2.7.3/gems/sidekiq-6.2.1/lib/sidekiq/util.rb:52:in `block in safe_thread'
+Started GET "/" for 127.0.0.1 at 2021-05-26 19:45:29 -0300
+  [1m[35m (27.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms | Allocations: 1679)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-05-26 19:45:29 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 8.5ms | Allocations: 611)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 48.6ms | Allocations: 2893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 161.7ms | Allocations: 8955)
+Completed 200 OK in 307ms (Views: 259.3ms | ActiveRecord: 10.6ms | Allocations: 16586)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-05-26 19:45:44 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jorge@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jorge@email.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 545ms (ActiveRecord: 17.6ms | Allocations: 7301)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-26 19:45:45 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/auth/spotify
+Completed 302 Found in 10ms (ActiveRecord: 1.9ms | Allocations: 1515)
+
+
+Started GET "/auth/spotify" for 127.0.0.1 at 2021-05-26 19:45:45 -0300
+Started GET "/auth/spotify/callback?code=AQC9RDM_t7aXpER3Ew7XfoMdRDDtnRQI54Nyq6gNP2lytYkef1BI8TII6saxV1rGX4XDpttcUt5U2aq087wU77sULxzf4Of1SnYRRedm21N2k11DhiNJP5VZ2O61Gn6AvpQUJikuEeFv0_0BFEbJM1QmXdEdJiowaOUk2Ez708aV5OKfsucLczdOpsF61Oyzvpa1ywWr_Th1Kk2OwzpwHxbgcFQIhR4q6yLGasawbHdt6hZrJz9cMaEgASJv_cqE9JUsa5mJBL3abQYyLfudi0j_OADQ339mbas_-UZQHDA753FRMKvdskBEk71ORr5zYUJVBcRDLYS__QnUhOo1sCvJFjq4xg11V7m0f2BmlZfdjKujY9GiwKyvxLfP1Z1mKcagI4O0MMUl2xgACx6iRs3tjkdPTV6auYTO3MKR2G8EnJ9P7hm2yg&state=3367c4f479cbc9535f9682f4a9de76802c5260d7464d82ac" for 127.0.0.1 at 2021-05-26 19:45:45 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"code"=>"AQC9RDM_t7aXpER3Ew7XfoMdRDDtnRQI54Nyq6gNP2lytYkef1BI8TII6saxV1rGX4XDpttcUt5U2aq087wU77sULxzf4Of1SnYRRedm21N2k11DhiNJP5VZ2O61Gn6AvpQUJikuEeFv0_0BFEbJM1QmXdEdJiowaOUk2Ez708aV5OKfsucLczdOpsF61Oyzvpa1ywWr_Th1Kk2OwzpwHxbgcFQIhR4q6yLGasawbHdt6hZrJz9cMaEgASJv_cqE9JUsa5mJBL3abQYyLfudi0j_OADQ339mbas_-UZQHDA753FRMKvdskBEk71ORr5zYUJVBcRDLYS__QnUhOo1sCvJFjq4xg11V7m0f2BmlZfdjKujY9GiwKyvxLfP1Z1mKcagI4O0MMUl2xgACx6iRs3tjkdPTV6auYTO3MKR2G8EnJ9P7hm2yg", "state"=>"3367c4f479cbc9535f9682f4a9de76802c5260d7464d82ac"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/home_controller.rb:8:in `index'
+  [1m[36mUser Update (36.8ms)[0m  [1m[33mUPDATE "users" SET "user_hash" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["user_hash", "---\nbirthdate: \ncountry: \ndisplay_name: Jorge Felipe\nemail: felipespfc310800@gmail.com\nfollowers: !ruby/hash:OmniAuth::AuthHash\n  href: \n  total: 27\nimages: !ruby/array:Hashie::Array\n- !ruby/hash:OmniAuth::AuthHash\n  height: \n  url: https://scontent-ort2-1.xx.fbcdn.net/v/t1.6435-1/c6.0.320.320a/p320x320/71086984_2434063610044358_947977351847739392_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=0c64ff&_nc_ohc=vXS-gSP_NWUAX-hrF55&_nc_ht=scontent-ort2-1.xx&tp=27&oh=b77933aeb8e45ad7692ac3ced1b6cd97&oe=60D3F5D7\n  width: \nproduct: \nexternal_urls: !ruby/hash:OmniAuth::AuthHash\n  spotify: https://open.spotify.com/user/12165846304\nhref: https://api.spotify.com/v1/users/12165846304\nid: '12165846304'\ntype: user\nuri: spotify:user:12165846304\ncredentials: !ruby/hash:OmniAuth::AuthHash\n  token: BQCo33l6wu4QhBrkeXsdIOLgQ6JDFq9ZMDy-5RGhu8aY59_4XFWJyHV7hqmQrDskAe49T-rOTKo36fSkbo6I-fhgLlTdmlOveHV_zGN-yf2KP6eLIj8Rinuy-m6GowXa2H2rCB5vsG7B5FrNItr09v52cR0zHOZFHmvT4zfXffJaJ3JrG4nf01Rw85gKIGPLaCK_G-JnvQhi9pCInnyi7HzKGIohltMfxbkE-VzKfZwM3Aj5UtDCtQbH\n  refresh_token: AQC6tqqUKK1IYMmUvgfjRE-CD8G9gMB5L3W-9fgv8ERzXCg8p4e9Ke9Y2V8zImzka8TpAqqsGl0CE2DFB-7uZcKjM0D0xzBQwgTqzjeRIEyuN9-w8-b3qli8QUhyfMtOKew\n  expires_at: 1622072746\n  expires: true\n"], ["updated_at", "2021-05-26 22:45:47.560230"], ["id", 1]]
+  ↳ app/controllers/home_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/home_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 216)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 3376)
+Completed 200 OK in 109ms (Views: 25.3ms | ActiveRecord: 57.6ms | Allocations: 10403)
+
+
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af] Performing RemoveMusicJob (Job ID: e276ee36-fd82-4fae-baf6-d48d626ae1af) from Sidekiq(default) enqueued at 2021-05-25T01:23:17Z with arguments: 1, 2
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/jobs/remove_music_job.rb:6:in `perform'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mPlaylist Load (1.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/jobs/remove_music_job.rb:7:in `perform'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mMusic Load (0.9ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1[0m  [["playlist_id", 2]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/jobs/remove_music_job.rb:7:in `perform'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mMusic Load (1.8ms)[0m  [1m[34mSELECT "musics".* FROM "musics" WHERE "musics"."playlist_id" = $1 AND "musics"."id_spotify" IN ($2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21) AND "musics"."sounded" = $22[0m  [["playlist_id", 2], [nil, "4CVg8p96jlKyYeLjupzVZ4"], [nil, "6LDAUF7L1PhZh0utprIpe2"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1XqnaJPGDFEytLEvYdJsS3"], [nil, "1PQRwFvNM7xV65bIkHmDtx"], [nil, "0BYrbDZHhawvqbj3DXDQql"], [nil, "2Gjt4rUHBUH0rMKpBg0hF4"], [nil, "0gmDtSc2Ay17diWj6nJjlG"], [nil, "4Ijct6HkKsC9HQVgcnMe7C"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2c9JSOnIet8d2SIL0BZfhN"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "2LOIoeI16A8jjKubPKoCSa"], [nil, "5wyifj9jya5OUkuTKLFIhn"], [nil, "6fDznfFRjouzaKssGLFp2x"], [nil, "4ZM2bK24dV7paMOEO8FQiA"], [nil, "4y7DKv0aPbnBOr4N4Zmarg"], ["sounded", false]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/jobs/remove_music_job.rb:16:in `map'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.1ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mCACHE Playlist Load (0.0ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" WHERE "playlists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/services/get_playlist_service.rb:11:in `block in call'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/jobs/remove_music_job.rb:25:in `block in perform'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mMusic Update (1.7ms)[0m  [1m[33mUPDATE "musics" SET "sounded" = $1, "updated_at" = $2 WHERE "musics"."id" = $3[0m  [["sounded", true], ["updated_at", "2021-05-26 22:45:52.390036"], ["id", 9]]
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/jobs/remove_music_job.rb:25:in `block in perform'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   [1m[36mTRANSACTION (14.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af]   ↳ app/jobs/remove_music_job.rb:25:in `block in perform'
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af] Enqueued RemoveMusicJob (Job ID: 7ea91933-a0a4-4178-bd88-f44e905d2ca0) to Sidekiq(default) at 2021-05-26 22:49:12 UTC with arguments: 1, 2
+[ActiveJob] [RemoveMusicJob] [e276ee36-fd82-4fae-baf6-d48d626ae1af] Performed RemoveMusicJob (Job ID: e276ee36-fd82-4fae-baf6-d48d626ae1af) from Sidekiq(default) in 1964.73ms
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPlaylist Load (0.9ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists" ORDER BY "playlists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMusic Load (0.9ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY "musics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMusic Load (1.3ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY "musics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "musics"."id_spotify" FROM "musics"[0m
+  [1m[36mMusic Load (1.0ms)[0m  [1m[34mSELECT "musics".* FROM "musics" ORDER BY "musics"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2021-05-26 21:01:25 -0300
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms | Allocations: 1679)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-05-26 21:01:25 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 11.1ms | Allocations: 611)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 41.1ms | Allocations: 2894)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | Allocations: 8956)
+Completed 200 OK in 120ms (Views: 83.5ms | ActiveRecord: 12.6ms | Allocations: 16584)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-05-26 21:01:34 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (Duration: 10.0ms | Allocations: 222)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 141)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 18.4ms | Allocations: 1868)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 4974)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.0ms | Allocations: 6245)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-05-26 21:01:47 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sara@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sara@email.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (Duration: 2.5ms | Allocations: 615)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 105)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2196)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5282)
+Completed 200 OK in 438ms (Views: 18.1ms | ActiveRecord: 9.4ms | Allocations: 12953)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-05-26 21:01:55 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sara@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sara@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (112.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "sara@email.com"], ["encrypted_password", "$2a$12$Ccqcbzcfd48gKYTDkt6blumGhGlgdMPjEuGKC3s5j6ta2QfASkEWe"], ["created_at", "2021-05-27 00:01:55.792047"], ["updated_at", "2021-05-27 00:01:55.792047"]]
+  [1m[36mTRANSACTION (17.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 500ms (ActiveRecord: 133.2ms | Allocations: 6049)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-26 21:01:55 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/auth/spotify
+Completed 302 Found in 14ms (ActiveRecord: 4.7ms | Allocations: 1812)
+
+
+Started GET "/auth/spotify" for 127.0.0.1 at 2021-05-26 21:01:55 -0300
+Started GET "/" for 127.0.0.1 at 2021-05-26 21:03:54 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 173)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-05-26 21:03:54 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 152)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1018)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 4169)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 4766)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-05-26 21:04:02 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sara@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sara@email.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 384ms (ActiveRecord: 2.6ms | Allocations: 4090)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sara@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 152)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1001)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4104)
+Completed 200 OK in 355ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 4631)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-05-26 21:04:17 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sara@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sara@email.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 360ms (ActiveRecord: 2.3ms | Allocations: 1645)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sara@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 152)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1001)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4152)
+Completed 200 OK in 362ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 4673)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2021-05-26 21:04:28 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 45)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 105)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1054)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4202)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 4719)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-05-26 21:04:45 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sara@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sara@email.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (Duration: 1.8ms | Allocations: 553)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 105)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2098)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 5182)
+Completed 200 OK in 386ms (Views: 17.5ms | ActiveRecord: 5.4ms | Allocations: 10337)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-05-26 21:05:07 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sara@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sara@email.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 496)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 105)
+  Rendered /home/r00t/.rvm/gems/ruby-2.7.3/gems/devise-4.8.0/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2041)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 5129)
+Completed 200 OK in 445ms (Views: 34.8ms | ActiveRecord: 6.1ms | Allocations: 10261)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-05-26 21:05:20 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lua@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (22.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lua@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "lua@email.com"], ["encrypted_password", "$2a$12$t5H2EFYcgXXmJrEf4Gd4Ne0/vRL9uJJMSwZiMc/2CmFia.YLmfrbu"], ["created_at", "2021-05-27 00:05:21.354067"], ["updated_at", "2021-05-27 00:05:21.354067"]]
+  [1m[36mTRANSACTION (19.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 428ms (ActiveRecord: 46.8ms | Allocations: 5821)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-26 21:05:21 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/auth/spotify
+Completed 302 Found in 14ms (ActiveRecord: 2.7ms | Allocations: 1508)
+
+
+Started GET "/auth/spotify" for 127.0.0.1 at 2021-05-26 21:05:21 -0300
+Started GET "/playlists/new" for 127.0.0.1 at 2021-05-26 21:06:22 -0300
+Processing by PlaylistsController#new as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering playlists/new.html.erb within layouts/application
+  Rendered playlists/_form.html.erb (Duration: 20.8ms | Allocations: 780)
+  Rendered playlists/new.html.erb within layouts/application (Duration: 24.6ms | Allocations: 1327)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 4415)
+Completed 200 OK in 92ms (Views: 41.5ms | ActiveRecord: 12.6ms | Allocations: 13471)
+
+
+Started POST "/playlists" for 127.0.0.1 at 2021-05-26 21:06:34 -0300
+Processing by PlaylistsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "playlist"=>{"name"=>"PlayLIst_de_quarta"}, "commit"=>"Create Playlist"}
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/playlists_controller.rb:32:in `create'
+  [1m[36mPlaylist Create (16.9ms)[0m  [1m[32mINSERT INTO "playlists" ("name", "image_url", "public", "user_id", "owner", "href", "uri", "path", "id_spotify", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["name", "PlayLIst_de_quarta"], ["image_url", "[]"], ["public", false], ["user_id", 1], ["owner", "---\nbirthdate: \ncountry: \ndisplay_name: Jorge Felipe\nemail: \nfollowers: \nimages: \nproduct: \nexternal_urls:\n  spotify: https://open.spotify.com/user/12165846304\nhref: https://api.spotify.com/v1/users/12165846304\nid: '12165846304'\ntype: user\nuri: spotify:user:12165846304\n"], ["href", "https://api.spotify.com/v1/playlists/6hMZxzxclygiCmYQZdBHOv"], ["uri", "spotify:playlist:6hMZxzxclygiCmYQZdBHOv"], ["path", "users/12165846304/playlists/6hMZxzxclygiCmYQZdBHOv"], ["id_spotify", "6hMZxzxclygiCmYQZdBHOv"], ["created_at", "2021-05-27 00:06:36.000705"], ["updated_at", "2021-05-27 00:06:36.000705"]]
+  ↳ app/controllers/playlists_controller.rb:32:in `create'
+  [1m[36mTRANSACTION (14.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/playlists_controller.rb:32:in `create'
+[ActiveJob] Enqueued RemoveMusicJob (Job ID: 5c8227d3-8cfc-46bc-a4c9-03df49d2681c) to Sidekiq(default) at 2021-05-27 00:09:56 UTC with arguments: 1, 4
+Redirected to http://127.0.0.1:3000/playlists
+Completed 302 Found in 1466ms (ActiveRecord: 38.6ms | Allocations: 18460)
+
+
+Started GET "/playlists" for 127.0.0.1 at 2021-05-26 21:06:36 -0300
+Processing by PlaylistsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering playlists/index.html.erb within layouts/application
+  [1m[36mPlaylist Load (3.9ms)[0m  [1m[34mSELECT "playlists".* FROM "playlists"[0m
+  ↳ app/views/playlists/index.html.erb:2
+  Rendered playlists/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1070)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 4203)
+Completed 200 OK in 31ms (Views: 18.0ms | ActiveRecord: 5.6ms | Allocations: 6009)
+
+
+Started GET "/" for 127.0.0.1 at 2021-05-26 21:10:54 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/auth/spotify
+Completed 302 Found in 43ms (ActiveRecord: 14.4ms | Allocations: 6306)
+
+
+Started GET "/auth/spotify" for 127.0.0.1 at 2021-05-26 21:10:55 -0300
+Started GET "/auth/spotify/callback?code=AQAczIyW9_OQ_JozYdKEJdYJ5zo_6rpyQyTTlqVCXTmpOMoQaPAj8tIUweqf6j04aHHxfySvthKnVd2gwqfw0eMGim76_iqaXaqqCd80xET4WlkAlFlVy78yAfTlA9Loj_PFcpwummZ_sYj0-kLTI0gRNU4W49V8UISizOkwW40ZNMwww_DuR8yjj1WETWK8tIclf8jD1UkjDfVRLDW2mnQemWVTPnKrZ3GbEhG2gWMD8WcrsWbhpkVjBWj-xHVs3QcLNEw2V8ZjhfXCrDQZyqYNXS9Gy0EOKUCzcigXydhlpaI0kxuW5akPOOnlt4G5BNuaX3NrydTqkMzawfy2PgQG4MhHV0ItyMq-55CE0jVAqRrbpIHaygE53xZcIsSBP_xRkn1V82NaNBLmMK5Umey08qXjqA1X6hnGcu86ILaqufC0VAGA-A&state=e6ce52bbce6c445873aabc914748e3f1107307351ca0f0f8" for 127.0.0.1 at 2021-05-26 21:10:55 -0300
+Processing by HomeController#index as HTML
+  Parameters: {"code"=>"AQAczIyW9_OQ_JozYdKEJdYJ5zo_6rpyQyTTlqVCXTmpOMoQaPAj8tIUweqf6j04aHHxfySvthKnVd2gwqfw0eMGim76_iqaXaqqCd80xET4WlkAlFlVy78yAfTlA9Loj_PFcpwummZ_sYj0-kLTI0gRNU4W49V8UISizOkwW40ZNMwww_DuR8yjj1WETWK8tIclf8jD1UkjDfVRLDW2mnQemWVTPnKrZ3GbEhG2gWMD8WcrsWbhpkVjBWj-xHVs3QcLNEw2V8ZjhfXCrDQZyqYNXS9Gy0EOKUCzcigXydhlpaI0kxuW5akPOOnlt4G5BNuaX3NrydTqkMzawfy2PgQG4MhHV0ItyMq-55CE0jVAqRrbpIHaygE53xZcIsSBP_xRkn1V82NaNBLmMK5Umey08qXjqA1X6hnGcu86ILaqufC0VAGA-A", "state"=>"e6ce52bbce6c445873aabc914748e3f1107307351ca0f0f8"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/home_controller.rb:8:in `index'
+  [1m[36mUser Update (4.5ms)[0m  [1m[33mUPDATE "users" SET "user_hash" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["user_hash", "---\nbirthdate: \ncountry: \ndisplay_name: Jorge Felipe\nemail: felipespfc310800@gmail.com\nfollowers: !ruby/hash:OmniAuth::AuthHash\n  href: \n  total: 27\nimages: !ruby/array:Hashie::Array\n- !ruby/hash:OmniAuth::AuthHash\n  height: \n  url: https://scontent-ort2-1.xx.fbcdn.net/v/t1.6435-1/c6.0.320.320a/p320x320/71086984_2434063610044358_947977351847739392_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=0c64ff&_nc_ohc=vXS-gSP_NWUAX-hrF55&_nc_ht=scontent-ort2-1.xx&tp=27&oh=b77933aeb8e45ad7692ac3ced1b6cd97&oe=60D3F5D7\n  width: \nproduct: \nexternal_urls: !ruby/hash:OmniAuth::AuthHash\n  spotify: https://open.spotify.com/user/12165846304\nhref: https://api.spotify.com/v1/users/12165846304\nid: '12165846304'\ntype: user\nuri: spotify:user:12165846304\ncredentials: !ruby/hash:OmniAuth::AuthHash\n  token: BQDlBf3-7C4ypP6iLiPdwxZIpjVf33vlZyMUdyHrUF8483sER_GYkDg-BP7zOljQdcczYZgg1YGsaZRFPvuk2iNogcBmJU9KYuU9iXfO_bcgB8XQ_1S3FU3qw19UBulQS8PSo7RhGB1mhCNmENAJZT8-bIk7bp2XeEjUmziL6Pc9-ardGpILUlnHw0RkMFYOD10xnp6b6bsstGdgcB3szUxVBe4Y2b4ud5tWlsmkiZWCyxcGqV8WH9mq\n  refresh_token: AQCByJrAuLTLULrsCWalGO09f9iO54oWQTW47atgLDc8pZ7vK4cW6iwbzMGRQ3VSNJKg8psyB0wwF7j7eki8CBwTaCUE9KxenYTpyQ_O5ve9HG1sww0q2Qe0egk-FC9y4_A\n  expires_at: 1622077855\n  expires: true\n"], ["updated_at", "2021-05-27 00:10:56.280071"], ["id", 1]]
+  ↳ app/controllers/home_controller.rb:8:in `index'
+  [1m[36mTRANSACTION (25.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/home_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 214)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3368)
+Completed 200 OK in 78ms (Views: 13.0ms | ActiveRecord: 34.0ms | Allocations: 9498)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]

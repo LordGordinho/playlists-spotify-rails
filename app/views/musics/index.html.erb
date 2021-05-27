@@ -3,3 +3,28 @@
   <%= text_field_tag(:q) %>
   <%= submit_tag("Search") %>
 <% end %>
+<div class = "container">
+  <h1> Musicas já adiciondas </h1>
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nome da musica</th>
+        <th scope="col">PLaylist Associada</th>
+        <th scope="col">Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @musics.each do |music| %>
+        <tr>
+          <th scope="row"><%= music.id %></th>
+          <td><%= music.name %></td>
+          <td><%= music.playlist.name %></td>
+          <td><%= link_to "Deletar", music_path(music), method: :delete, class: "btn btn-danger" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
